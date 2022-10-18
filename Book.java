@@ -1,45 +1,42 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Book {
 	
-	private ArrayList<String> paragraph;
-	
-	private ArrayList<String> table;
-	
-	private ArrayList<String> image;
-	
 	private String titlu ;
-	public Book(String string) {
+	
+	private String author;
+	
+	private List<Chapter> listChapter = new ArrayList<Chapter>();
+	
+	
+	public Book(String t) {
 		// TODO Auto-generated constructor stub
-		titlu = string;
-		paragraph = new ArrayList<>();
-		table = new ArrayList<>();
-		image = new ArrayList<>();
+		titlu = t;
 	}
 
-	public void createNewParagraph(String string) {
-		paragraph.add(string);
-		
-	}
-
-	public void createNewImage(String string) {
-		// TODO Auto-generated method stub
-		image.add(string);
-		
-	}
-
-	public void createNewTable(String string) {
-		// TODO Auto-generated method stub
-		table.add(string);
-		
+	public int createChapter(String titluCapitol) {
+		Chapter c = new Chapter(titluCapitol);
+		listChapter.add(c);
+		return listChapter.size() - 1;
 	}
 
 	public void print() {
 		// TODO Auto-generated method stub
 		System.out.println(titlu);
-		System.out.println(paragraph);
-		System.out.println(image);
-		System.out.println(table);
+		System.out.println(author);
+		System.out.println(listChapter);
+	}
+
+	public void addAuthor(Author a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Chapter getChapter(int indexChapterOne) {
+		// TODO Auto-generated method stub
+		
+		return listChapter.get(indexChapterOne);
 	}
 
 }
