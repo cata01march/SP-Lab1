@@ -1,8 +1,13 @@
 
 public class Author {
 
+	private String text;
+	
 	public Author(String string) {
-		// TODO Auto-generated constructor stub
+		text = string;
+	}
+	public void print() {
+		System.out.println(text);
 	}
 
 }

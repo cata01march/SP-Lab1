@@ -1,16 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Section {
+private String titlu ;
 	
-	private String titlu ;
-	
-	private Author author;
+	private String author;
 	
 	private List<Chapter> listChapter = new ArrayList<Chapter>();
 	
 	
-	public Book(String t) {
+	public Section(String t) {
 		// TODO Auto-generated constructor stub
 		titlu = t;
 	}
@@ -23,17 +22,14 @@ public class Book {
 
 	public void print() {
 		// TODO Auto-generated method stub
-		
 		System.out.println(titlu);
-		author.print();
-		for (Chapter c: listChapter) {
-			c.print();
-		}
+		System.out.println(author);
+		System.out.println(listChapter);
 	}
 
 	public void addAuthor(Author a) {
 		// TODO Auto-generated method stub
-		this.author = a;
+		
 	}
 
 	public Chapter getChapter(int indexChapterOne) {
@@ -41,5 +37,4 @@ public class Book {
 		
 		return listChapter.get(indexChapterOne);
 	}
-
 }

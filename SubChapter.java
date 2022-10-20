@@ -2,40 +2,45 @@ import java.util.ArrayList;
 
 public class SubChapter {
 
-	private ArrayList<Paragraph> paragraph = new ArrayList<Paragraph>();
-	private ArrayList<Image> image = new ArrayList<Image>();
-	private ArrayList<Table> table = new ArrayList<Table>();
+	private ArrayList<Paragraph> paragraphList = new ArrayList<Paragraph>();
+	private ArrayList<Image> imageList = new ArrayList<Image>();
+	private ArrayList<Table> tableList = new ArrayList<Table>();
 	
 	public SubChapter(String titluSubCapitol) {
-		// TODO Auto-generated constructor stub
-		paragraph = new ArrayList<>();
-		image = new ArrayList<>();
-		table = new ArrayList<>();
+		// TODO Auto-generate
 	}
 
 	
-	public void createNewParagraph(String p) {
+	public void createNewParagraph(String text) {
+		Paragraph paragraph = new Paragraph(text);
 		// TODO Auto-generated method stub
-		paragraph.add(Paragraph);
+		paragraphList.add(paragraph);
 		
 	}
 
-	public void createNewImage(String i) {
+	public void createNewImage(String text) {
+		Image image = new Image(text);
 		// TODO Auto-generated method stub
-		i.add(i);
+		imageList.add(image);
 	}
 
-	public void createNewTable(String t) {
+	public void createNewTable(String text) {
+		Table table = new Table(text);
 		// TODO Auto-generated method stub
-		t.add(t);
+		tableList.add(table);
 	}
-
 
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.println(p);
-		System.out.println(t);
-		System.out.println(i);
+		for (Paragraph p: paragraphList) {
+			p.print();
+		}
+		for (Image i: imageList) {
+			i.print();
+		}
+		for (Table t: tableList) {
+			t.print();
+		}
 	}
 	
 }

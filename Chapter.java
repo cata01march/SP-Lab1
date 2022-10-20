@@ -23,4 +23,11 @@ public class Chapter {
 		return listSubChapter.get(indexSubChapterOneOne);
 	}
 
+	public void print() {
+		// TODO Auto-generated method stub
+		for (SubChapter c: listSubChapter) {
+			c.print();
+		}
+	}
+
 }

@@ -2,18 +2,12 @@ import java.util.ArrayList;
 
 public class Image {
 
-	private ArrayList<String> image;
+private String text;
 	
-	private String imageName;
-	
-	public Image (String string) {
-		
-		image = new ArrayList<>();
+	public Image(String string) {
+		text = string;
 	}
-	
-	public void createNewImage(String string) {
-		// TODO Auto-generated method stub
-		image.add(string);
-		
+	public void print() {
+		System.out.println(text);
 	}
 }

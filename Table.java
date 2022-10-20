@@ -2,18 +2,12 @@ import java.util.ArrayList;
 
 public class Table {
 
-	private ArrayList<String> table;
-	
-	private String title;
+private String text;
 	
 	public Table(String string) {
-
-		table = new ArrayList<>();
+		text = string;
 	}
-
-	public void createNewTable(String string) {
-		// TODO Auto-generated method stub
-		table.add(string);
-		
+	public void print() {
+		System.out.println(text);
 	}
 }
