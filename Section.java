@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section {
-private String titlu ;
+public class Section implements Element{
 	
-	private String author;
-	
-	private List<Chapter> listChapter = new ArrayList<Chapter>();
+	private String titlu ;
+		
+	private List<Element> listElement = new ArrayList<Element>();
 	
 	
 	public Section(String t) {
@@ -14,27 +13,32 @@ private String titlu ;
 		titlu = t;
 	}
 
-	public int createChapter(String titluCapitol) {
-		Chapter c = new Chapter(titluCapitol);
-		listChapter.add(c);
-		return listChapter.size() - 1;
-	}
-
 	public void print() {
 		// TODO Auto-generated method stub
+		
 		System.out.println(titlu);
-		System.out.println(author);
-		System.out.println(listChapter);
+
+		for (Element c: listElement) {
+			c.print();
+		}
 	}
 
-	public void addAuthor(Author a) {
+
+	public void add(Element e) {
+		// TODO Auto-generated method stub
+		listElement.add(e);
+	}
+
+
+	@Override
+	public void remove(Element e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public Chapter getChapter(int indexChapterOne) {
+	@Override
+	public int get() {
 		// TODO Auto-generated method stub
-		
-		return listChapter.get(indexChapterOne);
+		return 0;
 	}
 }

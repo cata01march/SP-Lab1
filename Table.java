@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Table {
+public class Table implements Element{
 
 private String text;
 	
@@ -9,5 +9,20 @@ private String text;
 	}
 	public void print() {
 		System.out.println(text);
+	}
+	@Override
+	public void add(Element e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void remove(Element e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public int get() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Book extends Section{
 	
 	private String titlu ;
 	
@@ -12,7 +12,7 @@ public class Book {
 	
 	public Book(String t) {
 		// TODO Auto-generated constructor stub
-		titlu = t;
+		super(t);
 	}
 
 	public int createChapter(String titluCapitol) {
@@ -23,12 +23,10 @@ public class Book {
 
 	public void print() {
 		// TODO Auto-generated method stub
-		
-		System.out.println(titlu);
 		author.print();
-		for (Chapter c: listChapter) {
-			c.print();
-		}
+		super.print();
+		
+		
 	}
 
 	public void addAuthor(Author a) {
@@ -40,6 +38,11 @@ public class Book {
 		// TODO Auto-generated method stub
 		
 		return listChapter.get(indexChapterOne);
+	}
+
+	public void addContent(Element element) {
+		// TODO Auto-generated method stub
+		super.add(element);
 	}
 
 }
