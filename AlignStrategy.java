@@ -1,4 +1,4 @@
 
 public interface AlignStrategy {
-	public void render(Paragraph paragraph);
+	public void render(String paragraph);
 }
