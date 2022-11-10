@@ -7,6 +7,8 @@ public interface Element {
 	
 	public void remove(Element e);
 	
+	public void accept(Visitor v);
+	
 	int get();
 
 }

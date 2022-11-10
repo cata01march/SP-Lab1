@@ -41,4 +41,11 @@ public class Paragraph implements Element{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		v.visitParagraph(this);
+		
+	}
 }

@@ -41,4 +41,13 @@ public class Section implements Element{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		for (Element element : listElement) {
+			element.accept(v);
+		}
+		
+	}
 }
